@@ -6,6 +6,7 @@ const historyRoute = require("./routes/historyRoute.js");
 const reviewRoute = require("./routes/reviewRoute.js");
 
 const app = express();
+app.use(cors());
 app.use(bodyParser.json());
 
 app.use((req, res, next) => {
