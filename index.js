@@ -4,16 +4,15 @@ const bodyParser = require("body-parser");
 const cartRoute = require("./routes/cartRoute.js");
 const historyRoute = require("./routes/historyRoute.js");
 const reviewRoute = require("./routes/reviewRoute.js");
-const cors = require("cors");
 
 const app = express();
-app.use(cors());
 app.use(bodyParser.json());
 
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Headers", "*");
   res.setHeader("Access-Control-Allow-Methods", "*");
+  res.header("Access-Control-Allow-Credentials", true);
   next();
 });
 
