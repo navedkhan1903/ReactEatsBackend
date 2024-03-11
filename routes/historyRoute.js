@@ -4,7 +4,6 @@ const Order = require(".//models/order");
 
 router.get("/:uid", async (req, res, next) => {
   const userId = req.params.uid;
-  console.log(userId);
   let history;
 
   try {
