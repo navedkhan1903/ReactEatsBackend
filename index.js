@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const cartRoute = require("./routes/cartRoute.js");
 const historyRoute = require("./routes/historyRoute.js");
 const reviewRoute = require("./routes/reviewRoute.js");
+const cors = require("cors");
 
 const app = express();
 app.use(cors());
